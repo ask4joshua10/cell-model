@@ -4,31 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Interactive Animal Cell</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #info-box {
+      background-color: #e0f7fa;
+      border: 1px solid #ccc;
+      width: 600px;
+      padding: 10px;
+      display: none;
+      margin-top: 20px;
+    }
+
+    #cell-diagram {
+      width: 600px;
+      border: 1px solid #ccc;
+    }
+
+    #info-box h3 {
+      color: #00796b;
+    }
+
+    #info-box p {
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <h1>Interactive Animal Cell</h1>
 
-  <!-- Cell diagram image with image map -->
-  <img src="cell_diagram.png" alt="Cell Diagram" usemap="#cellmap" width="600">
+  <!-- Image of the cell diagram with an image map -->
+  <img id="cell-diagram" src="cell_diagram.png" alt="Animal Cell Diagram" usemap="#cellmap">
 
   <map name="cellmap">
-    <!-- Nucleus (center of the cell) -->
     <area shape="circle" coords="300,250,40" alt="Nucleus" href="#" onclick="showInfo('nucleus')">
-
-    <!-- Mitochondria (left side) -->
     <area shape="circle" coords="200,200,25" alt="Mitochondria" href="#" onclick="showInfo('mitochondria')">
-
-    <!-- Cell Membrane (around the cell edge - big rectangle) -->
     <area shape="rect" coords="50,50,550,450" alt="Cell Membrane" href="#" onclick="showInfo('cell_membrane')">
   </map>
 
-  <!-- Info box for content -->
-  <div id="info-box" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc; width: 600px; display: none;">
+  <!-- Info Box that will display information when a cell part is clicked -->
+  <div id="info-box">
     <h3>Click on a cell part</h3>
     <p>Information will appear here.</p>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const info = {
+      nucleus: "The nucleus controls cell activities and contains genetic material (DNA).",
+      mitochondria: "The mitochondria produce energy for the cell through cellular respiration.",
+      cell_membrane: "The cell membrane protects the cell and controls what enters and exits.",
+    };
+
+    function showInfo(part) {
+      const infoBox = document.getElementById('info-box');
+      infoBox.style.display = 'block';
+      infoBox.innerHTML = `<h3>${part.replace('_', ' ')}</h3><p>${info[part]}</p>`;
+    }
+  </script>
 </body>
 </html>
