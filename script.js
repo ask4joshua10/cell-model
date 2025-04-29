@@ -1,4 +1,3 @@
-﻿// script.js
 const info = {
   nucleus: "The nucleus controls cell activities and contains genetic material (DNA).",
   mitochondria: "The mitochondria produce energy for the cell through cellular respiration.",
