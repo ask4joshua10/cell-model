@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Animal Cell</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Interactive Animal Cell</h1>
+    <div class="cell-container">
+      <!-- Image map with clickable areas -->
+      <img src="cell_diagram.png" alt="Cell Diagram" usemap="#cellmap" class="cell-image">
+      <map name="cellmap">
+        <!-- Clickable regions (rectangular or circular) -->
+        <area shape="rect" coords="50,150,200,300" alt="Nucleus" onclick="showInfo('nucleus')">
+        <area shape="circle" coords="350,200,30" alt="Mitochondria" onclick="showInfo('mitochondria')">
+        <area shape="circle" coords="500,250,50" alt="Cell Membrane" onclick="showInfo('cell_membrane')">
+        <!-- Add more areas here based on your cell diagram -->
+      </map>
+    </div>
+
+    <!-- Information box to display data on clicked cell part -->
+    <div id="info-box" class="info-box">
+      <h3>Click on a cell part</h3>
+      <p>Information will appear here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
