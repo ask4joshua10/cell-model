@@ -1,37 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Cell Model</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CELLS alive! Interactive Cell Model</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Cell Model</h1>
+  <header>
+    <h1>CELLS alive!</h1>
+    <nav>
+      <ul class="top-nav">
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Study</a></li>
+        <li><a href="#">Play</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-layout">
+    <aside class="sidebar">
+      <h3>Contents</h3>
+      <ul>
+        <li>Cell Biology</li>
+        <li>Microbiology</li>
+        <li>Immunology</li>
+        <li>Microscopy</li>
+        <li>Watch Videos</li>
+        <li>SITE MAP</li>
+      </ul>
+      <h3>Explore</h3>
+      <ul>
+        <li>Cell Cams</li>
+        <li>Games/Puzzles</li>
+        <li>Cell Models</li>
+        <li>Mitosis & More</li>
+        <li>HowBig?</li>
+        <li>Image Gallery</li>
+      </ul>
+      <h3>Study</h3>
+      <ul>
+        <li>Worksheets</li>
+        <li>Games/Puzzles</li>
+        <li>Quizzes</li>
+        <li>PowerPoints</li>
+        <li>Glossary</li>
+        <li>SITE MAP</li>
+      </ul>
+    </aside>
+
+    <main class="content">
+      <section class="cell-model">
+        <h2>Cell Models</h2>
+        <p>Explore the structure of a cell by clicking on the organelles below.</p>
 
         <div class="tab-buttons">
-            <button class="tab active" onclick="switchCell('animal')">Animal Cell</button>
-            <button class="tab" onclick="switchCell('plant')">Plant Cell</button>
+          <button class="tab active" onclick="switchCell('animal')">Animal Cell</button>
+          <button class="tab" onclick="switchCell('plant')">Plant Cell</button>
         </div>
 
         <div class="cell-wrapper">
-            <img id="cellImage" class="cell-image" src="animal_cell.png" alt="Animal Cell">
+          <img id="cellImage" class="cell-image" src="animal_cell.png" alt="Animal Cell" />
 
-            <!-- Example Hotspot -->
-            <div class="hotspot" style="top: 30%; left: 40%; width: 40px; height: 40px;"
-                 onclick="showDescription('Nucleus')"></div>
-            <div class="hotspot" style="top: 50%; left: 60%; width: 30px; height: 30px;"
-                 onclick="showDescription('Mitochondrion')"></div>
-            <!-- Add more hotspots as needed -->
+          <div class="hotspot" style="top: 30%; left: 40%;" onclick="showDescription('Nucleus')"></div>
+          <div class="hotspot" style="top: 50%; left: 60%;" onclick="showDescription('Mitochondrion')"></div>
+          <div class="hotspot" style="top: 40%; left: 70%;" onclick="showDescription('Golgi Apparatus')"></div>
+          <div class="hotspot" style="top: 60%; left: 50%;" onclick="showDescription('Endoplasmic Reticulum')"></div>
+          <div class="hotspot" style="top: 45%; left: 30%;" onclick="showDescription('Ribosome')"></div>
+          <div class="hotspot" style="top: 55%; left: 20%;" onclick="showDescription('Lysosome')"></div>
+          <div class="hotspot" style="top: 65%; left: 80%;" onclick="showDescription('Cell Membrane')"></div>
         </div>
 
         <div id="description-box">
-            <h3>Click an organelle to learn more</h3>
-            <p id="description-text"></p>
+          <h3>Click an organelle to learn more</h3>
+          <p id="description-text"></p>
         </div>
-    </div>
+      </section>
+    </main>
+  </div>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>
+      For 30 years, the CELLS alive! website was provided free of charge. This version is provided free of charge as well.
+      You are welcome to share it freely with others with the understanding it not be used for profit and that this notice remains in place.
+    </p>
+    <p>&copy; 2023 James A. Sullivan</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
