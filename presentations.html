@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Presentations - Cell Models</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Presentations | Cell Models</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      margin: 0;
+    }
+
+    header {
+      background-color: #336699;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f8f8f8;
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #336699;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .downloads {
+      margin-top: 30px;
+    }
+
+    .downloads a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: #336699;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .downloads a:hover {
+      background-color: #2a5d8f;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <h1>Cell Model Presentations</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="presentations.html">Presentations</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="presentations.html">Presentations</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main>
     <h2>Download PowerPoint Files</h2>
-    <ul>
-      <li><a href="AnimalCellModel.ppt" download>Animal Cell Model</a></li>
-      <li><a href="BacteriaCellModel.ppt" download>Bacteria Cell Model</a></li>
-      <li><a href="PlantCellModel.ppt" download>Plant Cell Model</a></li>
-    </ul>
+
+    <div class="downloads">
+      <a href="AnimalCellModel.ppt" download>Animal Cell Model</a>
+      <a href="BacteriaCellModel.ppt" download>Bacteria Cell Model</a>
+      <a href="PlantCellModel.ppt" download>Plant Cell Model</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Cell Model Project</p>
+    &copy; 2025 Cell Model Project. All rights reserved.
   </footer>
+
 </body>
 </html>
